@@ -35,9 +35,11 @@
         </div>
 
     </div>
+    <br /><br />
     <div class="row">
 
-        <table id="tablaproductos">
+        <label>PEDIDO</label>
+        <table id="tablaproductos" style="width:50%">
           <thead>
             <tr>
                 <th>Codigo Producto</th>
@@ -63,11 +65,14 @@
         var listaProductos = [];
 
         function addProducto() {
+
+
             var codigoProducto = document.getElementById("<%=txtCodigoProducto.ClientID%>").value;
             var nombreProducto = document.getElementById("<%=txtNombreProducto.ClientID%>").value;
             var cantidad = document.getElementById("<%=txtCantidad.ClientID%>").value;
             var precio = document.getElementById("<%=txtPrecio.ClientID%>").value;
 
+            
             var data = {
                 item:{
                     CodigoProducto: codigoProducto,
@@ -92,12 +97,12 @@
 
             var lista =[];
 
-            lista =JSON.parse(data.d);
+            lista = JSON.parse(data.d);
             listaProductos = lista;
 
             var body = document.getElementById('tablaproductos').getElementsByTagName('tbody')[0];
            
-            $("#tablaproductos tr").remove(); 
+            $("#tablaproductos tbody tr").remove(); 
 
             lista.forEach((item, index) => {
 
@@ -115,8 +120,7 @@
         }
 
         function endOrder(){
-            
-            
+
             var nombreUsuario = document.getElementById("<%=txtNombre.ClientID%>").value;
 
             var data = {
@@ -144,10 +148,7 @@
            document.getElementById("<%=txtCantidad.ClientID%>").value="";
            document.getElementById("<%=txtPrecio.ClientID%>").value="";
             
-           $("#tablaproductos tr").remove(); 
-
-           
-          
+            $("#tablaproductos tbody tr").remove(); 
         }
 
 

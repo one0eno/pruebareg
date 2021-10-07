@@ -3,10 +3,12 @@
 
     
     <div class="row">
-
-       
+       <br />
+        <label>Pedidos Realizados</label>
+       <br />
+        <%if (listaPedidos != null) {%>
         
-        <table id="tablaPedidos">
+        <table id="tablaPedidos" style="width:50%;">
            <thead>
             <td> Nombre </td>
             <td style="text-align:center;">Pedido</td>
@@ -28,7 +30,7 @@
                         </tr>
                          <% foreach (var producto in item.Productos) { %>
                         <tr>
-                            <td><%=producto.CodigoProducto%></td>
+                             <td><%=producto.CodigoProducto%></td>
                              <td><%=producto.Nombre%></td>
                              <td><%=producto.Cantidad%></td>
                              <td><%=producto.Precio%></td>
@@ -52,5 +54,10 @@
             </tr>
           </tfoot>
         </table>
-        
+
+        <div class="row">
+            El usuario que ha realizado el gasto mayor es : 
+            
+        </div>
+        <% }%>
 </asp:Content>
