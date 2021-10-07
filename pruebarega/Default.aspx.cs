@@ -14,7 +14,9 @@ namespace pruebarega
     public partial class _Default : Page
     {
 
-        public static List<Item> listaUsuarios = new List<Item>();
+        public static List<Item> listaProductos = new List<Item>();
+        public static List<Pedido> listaPedidos = new List<Pedido>();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,15 +31,13 @@ namespace pruebarega
         }
 
         [WebMethod(EnableSession = true)]
-        //public static string addProduct(string CodigoProducto, string Nombre, int Cantidad, decimal Precio)
+        
         public static string addProduct(Item item)
         {
-            listaUsuarios.Add(item);
-            HttpContext.Current.Session["listaUsuarios"] = listaUsuarios;
-
-
+            listaProductos.Add(item);
+            HttpContext.Current.Session["listaUsuarios"] = listaProductos;
             JavaScriptSerializer serializador = new JavaScriptSerializer();
-            var result = serializador.Serialize(listaUsuarios);
+            var result = serializador.Serialize(listaProductos);
 
             return result;       
 
@@ -45,12 +45,16 @@ namespace pruebarega
 
 
         [WebMethod(EnableSession = true)]
-        //public static string addProduct(string CodigoProducto, string Nombre, int Cantidad, decimal Precio)
-        public static string generarPedido(Item item)
+        public static string endOrder(Pedido pedido)
         {
-            
+            listaPedidos.Add(pedido);
 
-            return "";
+            HttpContext.Current.Session["listaPedidos"] = listaPedidos;
+
+            listaProductos = new List<Item>();
+            HttpContext.Current.Session["listaUsuarios"] = listaProductos;
+
+            return "Ok";
 
         }       
     }

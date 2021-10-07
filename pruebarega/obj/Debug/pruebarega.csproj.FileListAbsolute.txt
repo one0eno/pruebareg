@@ -18,3 +18,4 @@ c:\users\jorge\documents\visual studio 2013\Projects\pruebarega\pruebarega\bin\N
 c:\users\jorge\documents\visual studio 2013\Projects\pruebarega\pruebarega\bin\Microsoft.AspNet.FriendlyUrls.xml
 c:\users\jorge\documents\visual studio 2013\Projects\pruebarega\pruebarega\obj\Debug\pruebarega.dll
 c:\users\jorge\documents\visual studio 2013\Projects\pruebarega\pruebarega\obj\Debug\pruebarega.pdb
+C:\Users\Jorge\documents\visual studio 2013\Projects\pruebarega\pruebarega\obj\Debug\pruebarega.csprojResolveAssemblyReference.cache
