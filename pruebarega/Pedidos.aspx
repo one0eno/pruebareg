@@ -8,7 +8,7 @@
        <br />
         <%if (listaPedidos != null) {%>
         
-        <table id="tablaPedidos" style="width:50%;">
+        <table id="tablaPedidos" style="width:50%;" class="table">
            <thead>
             <td> Nombre </td>
             <td style="text-align:center;">Pedido</td>

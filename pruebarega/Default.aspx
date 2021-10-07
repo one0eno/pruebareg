@@ -43,7 +43,7 @@
     <div class="row">
 
         <label>PEDIDO</label>
-        <table id="tablaproductos" style="width:50%">
+        <table id="tablaproductos" style="width:50%" class="table">
           <thead>
             <tr>
                 <th>Codigo Producto</th>
@@ -59,9 +59,6 @@
            
           </tfoot>
         </table>
-
-       
-
     </div>
 
     <script type="text/javascript">
@@ -154,11 +151,6 @@
             
             $("#tablaproductos tbody tr").remove(); 
         }
-
-
-
-        
-        
 </script>
 </asp:Content>
 
