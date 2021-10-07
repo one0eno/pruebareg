@@ -31,6 +31,7 @@
             <br />
         <asp:button runat="server" OnClientClick="addProducto(); return false;" Text="Añadir producto" />
         <asp:button runat="server" OnClientClick="endOrder(); return false;" Text="Terminar Pedido" />
+        <a href="/pedidos.aspx">Pedidos</a>
         </div>
 
     </div>
@@ -46,14 +47,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>initial row</td>
-            </tr>
+           
           </tbody>
           <tfoot>
-            <tr>
-              <td>My Footer</td>
-            </tr>
+           
           </tfoot>
         </table>
 
@@ -63,8 +60,6 @@
 
     <script type="text/javascript">
 
-        
-        
         var listaProductos = [];
 
         function addProducto() {

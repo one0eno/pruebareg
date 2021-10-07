@@ -35,7 +35,7 @@ namespace pruebarega
         public static string addProduct(Item item)
         {
             listaProductos.Add(item);
-            HttpContext.Current.Session["listaUsuarios"] = listaProductos;
+            HttpContext.Current.Session["listaProductos"] = listaProductos;
             JavaScriptSerializer serializador = new JavaScriptSerializer();
             var result = serializador.Serialize(listaProductos);
 
@@ -52,7 +52,7 @@ namespace pruebarega
             HttpContext.Current.Session["listaPedidos"] = listaPedidos;
 
             listaProductos = new List<Item>();
-            HttpContext.Current.Session["listaUsuarios"] = listaProductos;
+            HttpContext.Current.Session["listaProductos"] = listaProductos;
 
             return "Ok";
 
