@@ -10,18 +10,17 @@
         
         <table id="tablaPedidos" style="width:50%;" class="table">
            <thead>
-            <td> Nombre </td>
-            <td style="text-align:center;">Pedido</td>
+               <tr>
+                    <td> Nombre </td>
+                    <td style="text-align:center;">Pedido</td>
+               </tr>
            </thead>
           <tbody>
-         <% foreach (var item in listaPedidos) { 
-                
-                
-                %>
+         <% foreach (var item in listaPedidos) {  %>
            <tr>
                <td><%=item.NombreUsuario %></td>
                 <td>
-                    <table>
+                    <table style="width:100%;">
                          <tr>
                             <th>Codigo Producto</th>
                             <th>Nombre</th>
@@ -50,14 +49,17 @@
          </tbody>
           <tfoot>
             <tr>
-              
+              <td></td>
+              <td style="text-align:right;">El total de los pedidos es: <%=totalPedidos%></td>
             </tr>
           </tfoot>
         </table>
 
         <div class="row">
-            El usuario que ha realizado el gasto mayor es : 
-            
+            <div class="col-md-4">
+                <p>El usuario que ha realizado el gasto mayor es : <%=usuarioMaxPedido%> con un total de <%=maxPedido %></p>
+                
+            </div>
         </div>
         <% }%>
 </asp:Content>
