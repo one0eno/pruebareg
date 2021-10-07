@@ -1,36 +1,40 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="pruebarega._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
+    <br />
     <div class="jumbotron">
-        
+        Realizar Pedidos
     </div>
 
     <div class="row">
         <div class="col-md-4">
-        <label>Nombre</label>
-         <br />
-        <asp:TextBox ID="txtNombre"  runat="server"></asp:TextBox>
-        <br />
-         <br />
-        <label>CodigoProducto</label>
-            <br />
-        <asp:TextBox ID="txtCodigoProducto"  runat="server"></asp:TextBox>
-        <br />
-        <label>Nombre Producto</label>
-            <br />
-        <asp:TextBox ID="txtNombreProducto"  runat="server"></asp:TextBox>
-        <br />
-        <label>Cantidad</label>
-            <br />
-        <asp:TextBox ID="txtCantidad"   runat="server"></asp:TextBox>
-        <br />
-        <label>Precio</label>
-            <br />
-        <asp:TextBox ID="txtPrecio" runat="server"></asp:TextBox>
-            <br />
-        <asp:button runat="server" OnClientClick="addProducto(); return false;" Text="Añadir producto" />
-        <asp:button runat="server" OnClientClick="endOrder(); return false;" Text="Terminar Pedido" />
+        
+        <div class="form-group">
+            <label for="<%=txtNombre.ClientID%>">Nombre usuario</label>
+            <asp:TextBox ID="txtNombre" class="form-control" runat="server"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="<%=txtCodigoProducto.ClientID%>">Codigo Producto</label>
+            <asp:TextBox ID="txtCodigoProducto" class="form-control" runat="server"></asp:TextBox>
+        </div>
+         <div class="form-group">
+            <label for="<%=txtNombreProducto.ClientID%>">Nombre Producto</label>
+            <asp:TextBox ID="txtNombreProducto" class="form-control" runat="server"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="<%=txtCantidad.ClientID%>">Cantidad</label>
+            <asp:TextBox ID="txtCantidad" class="form-control"   runat="server"></asp:TextBox>
+       </div>
+        <div class="form-group">
+            <label for="<%=txtPrecio.ClientID%>">Precio</label>
+            <asp:TextBox class="form-control" ID="txtPrecio" runat="server"></asp:TextBox>
+
+        </div>
+        
+
+        
+        <asp:button runat="server" class="btn btn-primary" OnClientClick="addProducto(); return false;" Text="Añadir producto" />
+        <asp:button runat="server" class="btn btn-primary" OnClientClick="endOrder(); return false;" Text="Terminar Pedido" />
         <a href="/pedidos.aspx">Pedidos</a>
         </div>
 
