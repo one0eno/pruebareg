@@ -24,10 +24,7 @@ namespace pruebarega
         }
 
         protected void Button1_Click(object sender, EventArgs e)
-        {
-            string NombreUsuario = txtNombre.Text;
-
-            
+        { 
         }
 
         [WebMethod(EnableSession = true)]
@@ -40,7 +37,6 @@ namespace pruebarega
             var result = serializador.Serialize(listaProductos);
 
             return result;       
-
         }
 
 
@@ -48,7 +44,6 @@ namespace pruebarega
         public static string endOrder(Pedido pedido)
         {
             listaPedidos.Add(pedido);
-
             HttpContext.Current.Session["listaPedidos"] = listaPedidos;
 
             listaProductos = new List<Item>();
